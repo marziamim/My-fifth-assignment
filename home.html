@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Fifth Assignment</title>
+    <!-- daisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                navber: '#F9F7F3',
+                primary: '#B4F461',
+              }
+            }
+          }
+        }
+      </script>
+
+</head>
+<body >
+    <header class="md:container mx-auto" >
+        <nav class="flex justify-between bg-navber p-5">
+           <button class="text-2xl font-semibold bg-primary px-5 rounded-md">
+            <a href="blog.html">Blog</a>
+        </button>
+           <div class="flex justify-center items-center text-xl font-semibold gap-3">
+            <img src="assets/logo.png" alt="">
+            <h1>Donate Bangladesh</h1>
+           </div>
+           <div class="flex justify-center items-center text-xl gap-2">
+            <img src="assets/coin.png" alt="">
+            <p>5500BDT</p>
+           </div>
+        </nav>
+        <section class="flex justify-center items-center gap-10 p-5 mt-5">
+          <button class="btn btn-md p-5 bg-primary"><a href="">Donation</a></button>
+          <button class="btn btn-md p-5"><a href="">History</a></button>
+      </section>
+    </header>
+    <main class="w-3/4 mx-auto">
+        <!-- noakhali flood -->
+        <section class="mt-10">
+            <div class="hero">
+                <div class="hero-content flex-col lg:flex-row">
+                  <img
+                    src="assets/noakhali.png"
+                    class="max-w-sm rounded-lg shadow-2xl" />
+                  <div class="flex flex-col gap-y-2 mx-5">
+                   <div class="flex items-center">
+                    <img src="assets/coin.png" alt="">
+                    <button>0 BDT</button>
+                   </div>
+                    <h1 class="text-2xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
+                    <p class="py-6">
+                        The flood situation in Noakhali has worsened due to continuous rain and upstream water, leading many people to seek shelters. However, space is unavailable in remote areas, forcing many to live in waterlogged conditions.
+                    </p>
+                    <input class="border-2 border-solid py-2 pl-3 rounded-md" type="text" placeholder="Write Donation Amount">
+                    <button class="btn bg-primary">Donate Now</button>
+                  </div>
+                </div>
+              </div>
+        </section>
+        <!-- feni flood -->
+        <section class="mt-10">
+            <div class="hero">
+                <div class="hero-content flex-col lg:flex-row">
+                  <img
+                    src="assets/feni.png"
+                    class="max-w-sm rounded-lg shadow-2xl" />
+                  <div class="flex flex-col gap-y-2 mx-5">
+                   <div class="flex items-center">
+                    <img src="assets/coin.png" alt="">
+                    <button>600 BDT</button>
+                   </div>
+                    <h1 class="text-2xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h1>
+                    <p class="py-6">
+                        The floods, caused by the upwelling of water from India and heavy rains, have submerged six upazilas, leaving hundreds of thousands of people stranded. The first fatality was reported on the night of August 24, when locals discovered a body floating in knee-deep water in front of Sonali Bank on Mizan Road in Feni.
+                    </p>
+                    <input class="border-2 border-solid py-2 pl-3 rounded-md" type="text" placeholder="Write Donation Amount">
+                    <button class="btn bg-primary">Donate Now</button>
+                  </div>
+                </div>
+              </div>
+        </section>
+        <!-- quota movement -->
+        <section class="mt-10">
+            <div class="hero">
+                <div class="hero-content flex-col lg:flex-row">
+                  <img
+                    src="assets/quota-protest.png"
+                    class="max-w-sm rounded-lg shadow-2xl" />
+                  <div class="flex flex-col gap-y-2 mx-5">
+                   <div class="flex items-center">
+                    <img src="assets/coin.png" alt="">
+                    <button>2400 BDT</button>
+                   </div>
+                    <h1 class="text-2xl font-bold">Aid for Injured in the Quota Movement</h1>
+                    <p class="py-6">
+                        The government will bear the entire medical expenses of all those injured in the quota reform movement and are undergoing treatment in public hospitals.For those who are undergoing treatment in various private hospitals, the government has requested those private hospitals to waive the fee or if that is not possible to keep the fee minimum, reads a notification published by the government on 15 August.
+                    </p>
+                    <input class="border-2 border-solid py-2 pl-3 rounded-md" type="text" placeholder="Write Donation Amount">
+                    <button class="btn bg-primary">Donate Now</button>
+                  </div>
+                </div>
+              </div>
+        </section>
+    </main>
+    
+</body>
+</html>
