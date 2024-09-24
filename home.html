@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Fifth Assignment</title>
+   
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+  
+  <style>
+    .lexend-normal {
+      font-family: "Lexend", sans-serif;
+        }
+      </style>
+
     <!-- daisyUI -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
@@ -22,7 +34,7 @@
       </script>
 
 </head>
-<body >
+<body class="lexend-normal" >
     <header class="md:container mx-auto sticky top-0 z-10 shadow backdrop-blur-2xl" >
         <nav class="flex justify-between bg-navber p-5">
            <button class="text-2xl font-semibold bg-primary px-5 rounded-md">
@@ -84,15 +96,15 @@
                    <div>
                     <button class="btn">
                       <img src="assets/coin.png" alt="">
-                       <span>600 BDT</span>
+                       <span id="donate-amount-feni">600 BDT</span>
                     </button>
                    </div>
                     <h1 class="text-2xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h1>
                     <p class="py-6">
                         The floods, caused by the upwelling of water from India and heavy rains, have submerged six upazilas, leaving hundreds of thousands of people stranded. The first fatality was reported on the night of August 24, when locals discovered a body floating in knee-deep water in front of Sonali Bank on Mizan Road in Feni.
                     </p>
-                    <input class="border-2 border-solid py-2 pl-3 rounded-md" type="text" placeholder="Write Donation Amount">
-                    <button class="btn bg-primary">Donate Now</button>
+                    <input id="input-amount-feni" class="border-2 border-solid py-2 pl-3 rounded-md" type="text" placeholder="Write Donation Amount">
+                    <button id="donation-feni" class="btn bg-primary">Donate Now</button>
                   </div>
                 </div>
               </div>
@@ -108,15 +120,15 @@
                    <div>
                     <button class="btn">
                       <img src="assets/coin.png" alt="">
-                       <span>2400 BDT</span>
+                       <span id="donate-amount-movement">2400 BDT</span>
                     </button>
                    </div>
                     <h1 class="text-2xl font-bold">Aid for Injured in the Quota Movement</h1>
                     <p class="py-6">
                         The government will bear the entire medical expenses of all those injured in the quota reform movement and are undergoing treatment in public hospitals.For those who are undergoing treatment in various private hospitals, the government has requested those private hospitals to waive the fee or if that is not possible to keep the fee minimum, reads a notification published by the government on 15 August.
                     </p>
-                    <input class="border-2 border-solid py-2 pl-3 rounded-md" type="text" placeholder="Write Donation Amount">
-                    <button class="btn bg-primary">Donate Now</button>
+                    <input id="input-amount-movement" class="border-2 border-solid py-2 pl-3 rounded-md" type="text" placeholder="Write Donation Amount">
+                    <button id="donation-quota-movement" class="btn bg-primary">Donate Now</button>
                   </div>
                 </div>
               </div>
@@ -144,7 +156,8 @@
       <section id="history-section" class="hidden">
         <h1 class="text-3xl font-bold flex justify-center m-10">Donation History</h1>
         <div id="history-list">
-
+        </div>
+        <div id="history-list-feni">
         </div>
       </section>
     </main>

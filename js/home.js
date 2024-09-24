@@ -29,20 +29,83 @@ document.getElementById('donation-noakhali')
      my_modal_1.showModal()
 
     }
-    
-    
-
     //  history
     const historyItem = document.createElement("div");
     historyItem.className = "bg-white p-3 rounded-md border-2 border-solid";
     historyItem.innerHTML = `
-        <p class= "text-xl text-gray-500>Date: ${new Date().toLocaleDateString()}</p>
-        <p class= "text-xl text-gray-500 p-10">${inputAmount} Taka is Donate for Donate for flood at Noakhali, Bangladesh. </p>
+        <p class= "text-xl text-gray-500 p-3">Date: ${new Date()}</p>
+        <p class= "text-xl font-semibold text-black-100 p-3">${inputAmount} Taka is Donate for Donate for flood at Noakhali, Bangladesh. </p>
     `
 const historyContainer = document.getElementById('history-list');
 historyContainer.insertBefore(historyItem, historyContainer.firstChild); 
+})
+
+// feni donation section
+document.getElementById('donation-feni')
+.addEventListener('click', function(){
+    const inputAmountFeni = getInputFieldValueById('input-amount-feni')
+
+    if(inputAmountFeni <=0 || isNaN(inputAmountFeni)){
+        alert ('Ivalid Donation Amount')  
+    }else{
+
+        const donateAmountFeni = getInputFieldInnerTextById('donate-amount-feni')
+        const reserveAmount = getInputFieldInnerTextById('reserve-amount')
+
+        const newDonateAmountFeni = donateAmountFeni + inputAmountFeni;
+        const newReserveAmount = reserveAmount - inputAmountFeni;
+
+        document.getElementById('donate-amount-feni').innerText = newDonateAmountFeni;
+        document.getElementById('reserve-amount').innerText = newReserveAmount;
+
+        my_modal_1.showModal()
+    }
+
+    // history
+    const historyItem = document.createElement("div");
+    historyItem.className = "bg-white p-3 rounded-md border-2 border-solid";
+    historyItem.innerHTML = `
+    <p class= "text-xl text-gray-500 p-3">Date: ${new Date()}</p>
+    <p class= "text-xl font-semibold text-black-100 p-3">${inputAmountFeni} Taka is Donate for Donate for flood at Feni, Bangladesh. </p>
+    `
+    const historyContainer = document.getElementById('history-list');
+    historyContainer.insertBefore(historyItem, historyContainer.firstChild); 
 
 })
+
+// quota movement section
+document.getElementById('donation-quota-movement')
+.addEventListener('click', function(){
+    const inputAmountMovement = getInputFieldValueById('input-amount-movement')
+
+    if(inputAmountMovement <=0 || isNaN(inputAmountMovement)){
+        alert ('Ivalid Donation Amount')  
+    }else{
+
+        const donateAmountMovement = getInputFieldInnerTextById('donate-amount-movement')
+        const reserveAmount = getInputFieldInnerTextById('reserve-amount')
+
+        const newDonateAmountMovement = donateAmountMovement + inputAmountMovement;
+        const newReserveAmount = reserveAmount - inputAmountMovement;
+
+        document.getElementById('donate-amount-movement').innerText = newDonateAmountMovement;
+        document.getElementById('reserve-amount').innerText = newReserveAmount;
+
+        my_modal_1.showModal()
+    }
+
+    // history
+    const historyItem = document.createElement("div");
+    historyItem.className = "bg-white p-3 rounded-md border-2 border-solid";
+    historyItem.innerHTML = `
+    <p class= "text-xl text-gray-500 p-3">Date: ${new Date()}</p>
+    <p class= "text-xl font-semibold text-black-100 p-3">${inputAmountMovement} Taka is Donate for Donate for Quota Movement Bangladesh. </p>
+    `
+    const historyContainer = document.getElementById('history-list');
+    historyContainer.insertBefore(historyItem, historyContainer.firstChild); 
+
+})
+
 
 // history functionality
 const historyTab = document.getElementById('history-tab')
