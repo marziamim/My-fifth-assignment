@@ -23,26 +23,32 @@
 
 </head>
 <body >
-    <header class="md:container mx-auto" >
+    <header class="md:container mx-auto sticky top-0 z-10 shadow backdrop-blur-2xl" >
         <nav class="flex justify-between bg-navber p-5">
            <button class="text-2xl font-semibold bg-primary px-5 rounded-md">
             <a href="blog.html">Blog</a>
         </button>
            <div class="flex justify-center items-center text-xl font-semibold gap-3">
             <img src="assets/logo.png" alt="">
-            <h1>Donate Bangladesh</h1>
+            <h1 class="hidden md:flex">Donate Bangladesh</h1>
            </div>
            <div class="flex justify-center items-center text-xl gap-2">
             <img src="assets/coin.png" alt="">
-            <p>5500BDT</p>
+            <button>
+            <span id="reserve-amount">5500</span>
+             BDT</button>
            </div>
         </nav>
-        <section class="flex justify-center items-center gap-10 p-5 mt-5">
-          <button class="btn btn-md p-5 bg-primary"><a href="">Donation</a></button>
-          <button class="btn btn-md p-5"><a href="">History</a></button>
+        <section class="flex justify-center items-center gap-10 p-5 mt-1">
+          <button id="donation-tab" 
+          class="text-xl rounded-md p-4 bg-primary">Donation</button>
+          <button id="history-tab" 
+          class="text-xl rounded-md p-4 bg-gray-200"> History </button>
       </section>
     </header>
     <main class="w-3/4 mx-auto">
+      <!-- card section -->
+      <section id="card-section">
         <!-- noakhali flood -->
         <section class="mt-10">
             <div class="hero">
@@ -51,16 +57,18 @@
                     src="assets/noakhali.png"
                     class="max-w-sm rounded-lg shadow-2xl" />
                   <div class="flex flex-col gap-y-2 mx-5">
-                   <div class="flex items-center">
-                    <img src="assets/coin.png" alt="">
-                    <button>0 BDT</button>
-                   </div>
+                    <div>
+                      <button class="btn">
+                        <img src="assets/coin.png" alt="">
+                         <span id="donate-amount">400 BDT</span>
+                      </button>
+                    </div>
                     <h1 class="text-2xl font-bold">Donate for Flood at Noakhali, Bangladesh</h1>
                     <p class="py-6">
                         The flood situation in Noakhali has worsened due to continuous rain and upstream water, leading many people to seek shelters. However, space is unavailable in remote areas, forcing many to live in waterlogged conditions.
                     </p>
-                    <input class="border-2 border-solid py-2 pl-3 rounded-md" type="text" placeholder="Write Donation Amount">
-                    <button class="btn bg-primary">Donate Now</button>
+                    <input id="input-amount" class="border-2 border-solid py-2 pl-3 rounded-md" type="text" placeholder="Write Donation Amount">
+                    <button id="donation-noakhali" class="btn bg-primary">Donate Now</button>
                   </div>
                 </div>
               </div>
@@ -73,9 +81,11 @@
                     src="assets/feni.png"
                     class="max-w-sm rounded-lg shadow-2xl" />
                   <div class="flex flex-col gap-y-2 mx-5">
-                   <div class="flex items-center">
-                    <img src="assets/coin.png" alt="">
-                    <button>600 BDT</button>
+                   <div>
+                    <button class="btn">
+                      <img src="assets/coin.png" alt="">
+                       <span>600 BDT</span>
+                    </button>
                    </div>
                     <h1 class="text-2xl font-bold">Donate for Flood Relief in Feni,Bangladesh</h1>
                     <p class="py-6">
@@ -95,9 +105,11 @@
                     src="assets/quota-protest.png"
                     class="max-w-sm rounded-lg shadow-2xl" />
                   <div class="flex flex-col gap-y-2 mx-5">
-                   <div class="flex items-center">
-                    <img src="assets/coin.png" alt="">
-                    <button>2400 BDT</button>
+                   <div>
+                    <button class="btn">
+                      <img src="assets/coin.png" alt="">
+                       <span>2400 BDT</span>
+                    </button>
                    </div>
                     <h1 class="text-2xl font-bold">Aid for Injured in the Quota Movement</h1>
                     <p class="py-6">
@@ -109,7 +121,33 @@
                 </div>
               </div>
         </section>
+      </section>
+
+      <!-- modal -->
+    <button class="btn hidden" onclick="my_modal_1.showModal()">open modal</button>
+      <dialog id="my_modal_1" class="modal">
+      <div class="modal-box flex flex-col justify-center items-center gap-y-3">
+      <h1 class="text-4xl font-bold ">Congrates!</h1>
+      <img src="assets/coin.png" alt="">
+      <p class="text-xl">You have Donated for Humankind</p>
+      <h3 class="text-xl font-bold">Successfully</h3>
+      <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn bg-primary px-9 text-xl rounded-lg">ok</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+      <!-- history section -->
+      <section id="history-section" class="hidden">
+        <h1 class="text-3xl font-bold flex justify-center m-10">Donation History</h1>
+        <div id="history-list">
+
+        </div>
+      </section>
     </main>
-    
+    <script src="js/home.js"></script>
 </body>
 </html>

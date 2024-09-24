@@ -29,7 +29,7 @@
          </button>
             <div class="flex justify-center items-center text-xl font-semibold gap-3">
              <img src="assets/logo.png" alt="">
-             <h1>Donate Bangladesh</h1>
+             <h1 class="hidden md:flex">Donate Bangladesh</h1>
             </div>
             <div class="flex justify-center items-center text-xl gap-2">
              <img src="assets/coin.png" alt="">
@@ -37,5 +37,49 @@
             </div>
          </nav>
     </header>
+    <main class="md:container mx-auto">
+      <h1 class="text-5xl font-bold my-10">Important FAQ</h1>
+
+      <!-- que 1 -->
+      <div tabindex="0" class="collapse collapse-arrow border-base-300 border mb-8">
+        <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+        <div class="collapse-content">
+          <p>The Document Object Model is a programming interface for web documents.It represents the page so that programs can change the document structure,style and content.The DOM repesents the document as nodes and objects that way</p>
+        </div>
+      </div>
+      <!-- que 2 -->
+      <div tabindex="0" class="collapse collapse-arrow border-base-300 border mb-8">
+        <div class="collapse-title text-xl font-medium">How do you select an element from the DOM ?</div>
+        <div class="collapse-content">
+          <p>I can select an element from the DOM in few ways. Example:
+            <br>
+            1.getElementById()
+            <br>
+            2.getElementsByClassName()
+            <br>
+            3.getElementsByTagName()
+            <br>
+            4.querySelector()
+            <br>
+            5.querySelectorAll() etc.
+            
+          </p>
+        </div>
+      </div>
+      <!--que 3  -->
+      <div tabindex="0" class="collapse collapse-arrow border-base-300 border mb-8">.
+        <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful ?</div>
+        <div class="collapse-content">
+          <p>Event delegation refers to the process of using event propagation(bubbling) to handle events at a higher level in the DOM than the element on which the event originated.</p>
+        </div>
+      </div>
+      <!--que 4 -->
+      <div tabindex="0" class="collapse collapse-arrow border-base-300 border">
+        <div class="collapse-title text-xl font-medium">How do you manipulate an elements attributes and style using the DOM ?</div>
+        <div class="collapse-content">
+          <p>I can use getAttribute(), setAttribute(), removeAttribute() and 'style' property or adding/removing classlist etc. using techniques. I can dynamically update attributes and style in response to user actions or other event in the DOM.</p>
+        </div>
+      </div>
+    </main>
 </body>
 </html>
